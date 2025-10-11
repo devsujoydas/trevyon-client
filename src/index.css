@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+.font-family-primary {
+    font-family: "Raleway", sans-serif;
+}
+
+.font-family-secondary {
+    font-family: "Pacifico", cursive;
+}
+
+.font-family-third {
+    font-family: "BBH Sans Bartle", sans-serif;
+}
