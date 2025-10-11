@@ -2,8 +2,11 @@
 
 @import "tailwindcss";
 
+
+
 .font-family-primary {
     font-family: "Raleway", sans-serif;
+    font-weight: 500;
 }
 
 .font-family-secondary {
