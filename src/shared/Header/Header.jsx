@@ -38,8 +38,7 @@ const Header = () => {
 
           <div className='flex items-center gap-6 sm:gap-10 flex-wrap'>
             {/* Skincare NavLink */}
-            <div
-              onClick={() => setShowSkinCareDropDown(!showSkinCareDropDown)}
+            <div 
               onMouseEnter={() => setShowSkinCareDropDown(true)}
               onMouseLeave={() => setShowSkinCareDropDown(false)}
               className='relative flex items-center gap- cursor-pointer select-none'

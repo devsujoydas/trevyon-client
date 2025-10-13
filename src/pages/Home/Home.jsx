@@ -5,6 +5,7 @@ import ShopByCategory from './ShopByCategory'
 import NewArrive from './NewArrive'
 import OurSkinCare from './OurSkinCare'
 import HappyUsers from './HappyUsers'
+import JoinOurCommunity from '../../components/JoinOurCommunity/JoinOurCommunity'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <NewArrive />
       <OurSkinCare />
       <HappyUsers />
+      <JoinOurCommunity />
     </div>
   )
 }
