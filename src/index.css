@@ -20,3 +20,6 @@
     @apply max-w-screen-2xl mx-5 sm:mx-10 2xl:mx-auto
 }
 
+.plus-minus-btn{
+    @apply border-2 border-zinc-400 hover:border-transparent active:shadow-none hover:shadow-md w-12 h-12 rounded-sm flex justify-center items-center text-3xl cursor-pointer bg-transparent hover:bg-black text-black hover:text-white transition-all duration-300 active:scale-95
+}

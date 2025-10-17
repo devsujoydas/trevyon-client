@@ -4,7 +4,7 @@ import ClientLayout from '../Layout/ClientLayout';
 import About from '../pages/About/About';
 import ContactUs from '../pages/ContactUs/ContactUs';
 import Products from '../pages/Products/Products';
-import ProductDetails from '../pages/Products/ProductDetails';
+import ProductDetails from '../pages/Products/ProductDetails/ProductDetails';
 import Signup from '../pages/Auth/Signup';
 import Signin from '../pages/Auth/Signin';
 import ResetPassword from '../pages/Auth/ResetPassword'; 

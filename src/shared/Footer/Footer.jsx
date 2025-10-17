@@ -26,8 +26,8 @@ const Footer = () => {
           <h1 className='text-3xl mb-5'>Shop</h1>
           <div className='grid gap-3'>
             <Link to={"/products"}>All Products</Link>
-            <a href={"#best-sellers"}>Bestsellers</a>
-            <a href={"#new-arrive"}>New Arrivals</a>
+            <a href={"#Bestsellers"}>Bestsellers</a>
+            <a href={"#NewArrive"}>New Arrivals</a>
           </div>
         </div>
 

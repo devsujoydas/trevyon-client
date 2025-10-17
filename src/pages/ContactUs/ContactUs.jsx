@@ -1,8 +1,12 @@
 import React from 'react'
+import JoinOurCommunity from '../../components/JoinOurCommunity/JoinOurCommunity'
 
 const ContactUs = () => {
   return (
-    <div>ContactUs</div>
+    <div>
+
+      <JoinOurCommunity />
+    </div>
   )
 }
 

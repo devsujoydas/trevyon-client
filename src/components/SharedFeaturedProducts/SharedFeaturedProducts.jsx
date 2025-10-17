@@ -1,12 +1,13 @@
-import Product from '../Products/Product'
+
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import Product from '../../pages/Products/Product'
 
-const BestSellers = () => {
+const SharedFeaturedProducts = ({title,id}) => {
   return (
-    <div id='best-sellers' className='w-main py-5 md:py-14'>
+    <div id={`${id}`} className='w-main py-5 md:py-14'>
       <div className=' text-lg md:text-2xl flex items-center justify-between pb-5 md:pb-10'>
-        <h1 className=''>Bestsellers</h1>
+        <h1 className=''>{title}</h1>
         <Link to={"/products"} className='flex items-center gap-2 hover:underline'>View all products <ArrowRight /></Link>
       </div>
 
@@ -21,4 +22,4 @@ const BestSellers = () => {
   )
 }
 
-export default BestSellers
+export default SharedFeaturedProducts

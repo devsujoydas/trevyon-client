@@ -1,20 +1,19 @@
-import React from 'react'
+
 import Hero from './Hero'
-import BestSellers from './BestSellers'
 import ShopByCategory from './ShopByCategory'
-import NewArrive from './NewArrive'
 import OurSkinCare from './OurSkinCare'
 import HappyUsers from './HappyUsers'
 import JoinOurCommunity from '../../components/JoinOurCommunity/JoinOurCommunity'
+import SharedFeaturedProducts from '../../components/SharedFeaturedProducts/SharedFeaturedProducts'
 
 
 const Home = () => {
   return (
     <div>
       <Hero /> 
-      <BestSellers />
+      <SharedFeaturedProducts title={"Bestsellers"} id={"Bestsellers"} />
       <ShopByCategory />
-      <NewArrive />
+      <SharedFeaturedProducts title={"New Arrive"} id={"NewArrive"} />
       <OurSkinCare />
       <HappyUsers />
       <JoinOurCommunity />

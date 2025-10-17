@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import { ShoppingBag } from "lucide-react";
 import { IoStar } from "react-icons/io5";
 import productImg from "../../assets/products/product_1.png";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
     <motion.div
-      className="border border-transparent hover:border-zinc-200 p-1 md:p-3 rounded-xl cursor-pointer bg-white transition-all duration-300 hover:shadow-md"
+      className="border border-transparent group hover:border-zinc-200 p-1 md:p-3 rounded-xl cursor-pointer bg-white transition-all duration-300 hover:shadow-md"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       whileHover={{ scale: 1.01 }}
@@ -47,7 +48,7 @@ const Product = () => {
       {/* Product Info */}
       <div className="mt-4 space-y-0.5 md:space-y-1.5">
         <p className="text-gray-600 md:text-[16px] text-sm c">Serums</p>
-        <h1 className=" font-semibold text-gray-900 md:text-xl text-[18px] c">Body Lotion Serum</h1>
+        <Link to={"/products/productDetails"} className=" font-semibold text-gray-900 md:text-xl text-[18px] c group-hover:text-[#F092B0] transition-all">Body Lotion Serum</Link>
         <p className="md:text-3xl text-lg font-bold text-gray-900 ">$65</p>
 
         <div className="flex items-center gap-2  text-sm md:text-lg">
