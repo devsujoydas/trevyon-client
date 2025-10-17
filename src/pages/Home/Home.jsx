@@ -7,10 +7,11 @@ import OurSkinCare from './OurSkinCare'
 import HappyUsers from './HappyUsers'
 import JoinOurCommunity from '../../components/JoinOurCommunity/JoinOurCommunity'
 
+
 const Home = () => {
   return (
     <div>
-      <Hero />
+      <Hero /> 
       <BestSellers />
       <ShopByCategory />
       <NewArrive />

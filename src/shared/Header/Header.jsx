@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <div className='border-b border-zinc-200'>
-      <div className='flex flex-wrap sm:flex-nowrap items-center justify-between max-w-screen-2xl mx-auto py-6 px-4 sm:px-8'>
+      <div className='flex flex-wrap sm:flex-nowrap items-center justify-between w-main py-6 '>
 
         {/* Logo and Nav Links */}
         <div className=' flex items-center gap-8 sm:gap-14 flex-wrap'>
