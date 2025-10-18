@@ -10,10 +10,12 @@ const Header = () => {
   const [showSkinCareDropDown, setShowSkinCareDropDown] = useState(false)
   const [showCollectionsDropDown, setShowCollectionsDropDown] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
+  const [showCartSide, setShowCartSide] = useState(false)
   const [showUser, setShowUser] = useState(false)
-  const [user] = useState(true)
+  const [user] = useState(false)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [openAccordion, setOpenAccordion] = useState(null) // For mobile accordion
+  const [openAccordion, setOpenAccordion] = useState(null)
+
 
   // Dropdown animation for desktop
   const dropdownVariants = {
@@ -145,6 +147,7 @@ const Header = () => {
           {/* User Dropdown */}
           <div
             className='relative cursor-pointer'
+            onClick={() => setShowUser(!showUser)}
             onMouseEnter={() => setShowUser(true)}
             onMouseLeave={() => setShowUser(false)}
           >
@@ -157,14 +160,14 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className='absolute top-8 text-sm font-semibold overflow-hidden border border-zinc-200
+                  className='absolute top-8 text-sm font-semibold overflow-hidden border-t border-zinc-200
                   bg-white rounded-sm shadow-lg z-20 '
                 >
                   {user ? (
                     <div className='flex flex-col w-30'>
                       <Link to={"/"} className='hover:bg-zinc-200 px-3 py-2 border-b border-zinc-200'>My Account</Link>
                       <Link to={"/"} className='hover:bg-zinc-200 px-3 py-2 border-b border-zinc-200'>Order History</Link>
-                      <button className='hover:bg-red-600 hover:text-white px-3 py-2 text-red-600 text-left'>
+                      <button className='hover:bg-red-600 hover:text-white px-3 py-2 cursor-pointer text-red-600 text-left'>
                         Log Out
                       </button>
                     </div>
@@ -181,9 +184,8 @@ const Header = () => {
 
           {/* Cart */}
           <button className='hover:text-black transition-colors duration-200'>
-            <ShoppingBag className='w-5 md:w-8 cursor-pointer' />
-
-            <CartSideBar/>
+            <ShoppingBag onClick={() => setShowCartSide(true)} className='w-5 md:w-8 cursor-pointer' />
+            <CartSideBar showCartSide={showCartSide} setShowCartSide={setShowCartSide} />
           </button>
 
           {/* Mobile Menu Icon */}
@@ -195,7 +197,7 @@ const Header = () => {
           </button>
         </div>
       </div>
- 
+
       {/* Mobile Menu Fullscreen with Accordion */}
       <AnimatePresence>
         {showMobileMenu && (

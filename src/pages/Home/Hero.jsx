@@ -13,8 +13,8 @@ import { Link } from 'react-router-dom'
 
 const heroText = (img) => (
   <div className=' text-white bg-no-repeat bg-right bg-cover' style={{ backgroundImage: `url('${img}')` }} >
-    <div className='md:h-[850px] h-[450px] bg-[#0e00003f]  w-full  flex justify-center  items-center'>
-      <div className='md:h-[850px] w-full flex justify-center  items-center'>
+    <div className='md:h-[900px] h-[450px] bg-[#0e00003f]  w-full  flex justify-center  items-center'>
+      <div className='md:h-[900px] w-full flex justify-center  items-center'>
         <div className='max-w-screen-2xl w-full xl:mx-auto md:mx-10 mx-5 py-20 space-y-5 md:space-y-10'>
           <h1 className='font-semibold md:text-6xl text-3xl'>Discover your skin's true <br className='md:block hidden' /> potential</h1>
           <p className=' text-sm md:text-xl'>Premium skincare that combines innovation with clean, effective ingredients for all skin types.</p>

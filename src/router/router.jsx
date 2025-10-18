@@ -14,6 +14,9 @@ import AdminProducts from '../pages/Admin/AdminProducts';
 import Orders from '../pages/Admin/Orders';
 import Customers from '../pages/Admin/Customers';
 import Settings from '../pages/Admin/Settings';
+import PaymentCencel from '../pages/CheckOut/PaymentCenceled';
+import PaymentSuccessfully from '../pages/CheckOut/PaymentSuccessfully';
+import CheckOut from '../pages/CheckOut/CheckOut';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +42,18 @@ const router = createBrowserRouter([
       {
         path: "products/:id",
         element: <ProductDetails />,
+      },
+      {
+        path: "checkout",
+        element: <CheckOut />,
+      },
+      {
+        path: "paymentSuccess",
+        element: <PaymentSuccessfully />,
+      },
+      {
+        path: "paymentCencel",
+        element: <PaymentCencel />,
       },
       {
         path: "auth/signup",
