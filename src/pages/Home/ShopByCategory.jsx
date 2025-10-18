@@ -5,9 +5,9 @@ import maskImg from '../../assets/category/mask.png'
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion";
 
-const categoryBox = (img, text) => {
+const categoryBox = (img, text, query) => {
   return (
-    <Link to={"/products"} className='relative cursor-pointer overflow-hidden group rounded-sm'>
+    <Link to={`/products?category=${query}`} className='relative cursor-pointer overflow-hidden group rounded-sm'>
       <img src={img} className='w-full h-full group-hover:scale-105 transition-all duration-500' alt="" />
       <div className='absolute inset-0 flex justify-center items-center'>
         <h1 className='md:text-4xl text-2xl text-white'>{text}</h1>
@@ -26,10 +26,10 @@ const ShopByCategory = () => {
 
 
         <div className=' grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 md:gap-5 gap-2 2xl:gap-14 '>
-          {categoryBox(cleansersImg, "Cleansers")}
-          {categoryBox(serumsImg, "Serums")}
-          {categoryBox(moisturizersImg, "Moisturizer")}
-          {categoryBox(maskImg, "Mask")}
+          {categoryBox(cleansersImg, "Cleansers", "cleansers")}
+          {categoryBox(serumsImg, "Serums", "serums")}
+          {categoryBox(moisturizersImg, "Moisturizer", "moisturizer")}
+          {categoryBox(maskImg, "Mask", "mask")}
         </div>
       </div>
     </div>

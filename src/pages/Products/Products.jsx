@@ -1,39 +1,65 @@
-import React from 'react'
-import Product from './Product'
-import JoinOurCommunity from '../../components/JoinOurCommunity/JoinOurCommunity'
+import React, { useState } from "react";
+import Product from "./Product";
+import JoinOurCommunity from "../../components/JoinOurCommunity/JoinOurCommunity";
 
 const Products = () => {
-  return (
-    <div >
-      <div className='bg-[#F9E4CB] py-5'>
-        <div className='flex justify-between items-center w-main text-lg' >
-          <div className='flex items-center gap-10 '>
-            <button className='font-bold cursor-pointer'>All Products</button>
-            <div className=' items-center md:flex-row flex-col hidden gap-10 '>
+  const [activeCategory, setActiveCategory] = useState("All Products");
 
-              <button className='cursor-pointer text-zinc-700 hover:text-black transition-all'>Face</button>
-              <button className='cursor-pointer text-zinc-700 hover:text-black transition-all'>Brow</button>
-              <button className='cursor-pointer text-zinc-700 hover:text-black transition-all'>Eye</button>
-              <button className='cursor-pointer text-zinc-700 hover:text-black transition-all'>Lip</button>
-              <button className='cursor-pointer text-zinc-700 hover:text-black transition-all'>Sets</button>
-            </div>
+  const categories = ["Face", "Brow", "Eye", "Lip", "Sets"];
+
+  return (
+    <div>
+      {/* Top Filter Bar */}
+      <div className="bg-[#F9E4CB] py-5 sticky top-0 z-30 border-b border-zinc-200">
+        <div className="w-main mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-lg">
+          {/* Categories */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-10">
+            {/* All Products */}
+            <button
+              onClick={() => setActiveCategory("All Products")}
+              className={`font-semibold transition-all cursor-pointer  pb-0.5 ${
+                activeCategory === "All Products"
+                  ? "text-black border-b-2 border-black "
+                  : "text-zinc-700 hover:text-black border-b-2 border-transparent"
+              }`}
+            >
+              All Products
+            </button>
+
+            {/* Other Categories */}
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`cursor-pointer font-medium transition-all pb-0.5 ${
+                  activeCategory === cat
+                    ? "text-black border-b-2 border-black "
+                    : "text-zinc-700 hover:text-black border-b-2 border-transparent"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
-          <div>
-            <div className='flex items-center'>
-              <p>Sort :</p>
-              <select name="" id="" className='outline-none cursor-pointer'>
-                <option value="featured">Featured</option>
-                <option value="max">Max</option>
-                <option value="min">Min</option>
-                <option value="date">Date</option>
-              </select>
-            </div>
+
+          {/* Sort Dropdown */}
+          <div className="flex items-center gap-2">
+            <p className="text-zinc-700 font-medium">Sort:</p>
+            <select
+              className="bg-transparent border border-zinc-400 rounded-md px-2 py-1 text-sm cursor-pointer outline-none hover:border-black transition-colors"
+            >
+              <option value="featured">Featured</option>
+              <option value="max">Max</option>
+              <option value="min">Min</option>
+              <option value="date">Date</option>
+            </select>
           </div>
         </div>
       </div>
 
-      {/* Products boxs */}
-      <div className=' py-10 w-main grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-5 2xl:gap-14 '>
+      {/* Products Grid */}
+      <div className="py-10 w-main mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-10">
+        {/* You can later filter based on activeCategory */}
         <Product />
         <Product />
         <Product />
@@ -48,9 +74,10 @@ const Products = () => {
         <Product />
       </div>
 
+      {/* Join Section */}
       <JoinOurCommunity />
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

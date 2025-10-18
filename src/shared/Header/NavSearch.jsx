@@ -6,18 +6,21 @@ import demo4 from '../../assets/products/product_4.png'
 import demo5 from '../../assets/products/product_5.png'
 import demo6 from '../../assets/products/product_6.png'
 import { Search, ShoppingBag } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const SearchProduct = ({ product }) => (
   <div className='flex items-center justify-between gap-2 p-2 cursor-pointer hover:shadow-sm border border-zinc-100 transition-all duration-100'>
-    <div className='flex items-center gap-2'>
-      <div className='w-16 rounded-md overflow-hidden'>
-        <img src={product.image || demo} alt={product.name} />
+    <Link className='' to={`/products/${product.id}`}>
+      <div className='flex items-center gap-2'>
+        <div className='w-16 rounded-md overflow-hidden'>
+          <img src={product.image || demo} alt={product.name} />
+        </div>
+        <div>
+          <h1 className='font-semibold text-sm'>{product.name}</h1>
+          <p className='font-semibold text-xl text-red-800'>{product.price}$</p>
+        </div>
       </div>
-      <div>
-        <h1 className='font-semibold text-sm'>{product.name}</h1>
-        <p className='font-semibold text-xl text-red-800'>{product.price}$</p>
-      </div>
-    </div>
+    </Link>
     <div>
       <button className='flex items-center gap-2 justify-center border border-zinc-200 px-4 py-1.5 rounded-sm text-sm cursor-pointer hover:shadow-md active:scale-95 transition-all duration-100 hover:bg-zinc-200'>
         <ShoppingBag className='w-5' /> Add To Cart
@@ -102,7 +105,7 @@ const NavSearch = ({ setShowSearch }) => {
 
       <div
         className={`absolute ${openResultBox ? "block" : "hidden"} top-12 w-full bg-white border border-zinc-200 rounded-md z-10`}
-        style={{ maxHeight: '18rem', overflowY: 'auto' }}  // <-- এখানে স্টাইল দিলাম
+        style={{ maxHeight: '18rem', overflowY: 'auto' }}
       >
         <div className='grid gap-2 p-2'>
           {searchText.trim() === '' ? (

@@ -14,10 +14,10 @@ const ProductDetailsTop = () => {
 
                 <div className='w-7/12 grid grid-cols-15 gap-7'>
                     <div className='col-span-3 flex flex-col gap-6 '>
-                        <div><img className='w-full' src={productImgSm1} alt="" /></div>
-                        <div><img className='w-full' src={productImgSm2} alt="" /></div>
-                        <div><img className='w-full' src={productImgSm3} alt="" /></div>
-                        <div><img className='w-full' src={productImgSm4} alt="" /></div>
+                        <div><img className='w-full cursor-pointer' src={productImgSm1} alt="" /></div>
+                        <div><img className='w-full cursor-pointer' src={productImgSm2} alt="" /></div>
+                        <div><img className='w-full cursor-pointer' src={productImgSm3} alt="" /></div>
+                        <div><img className='w-full cursor-pointer' src={productImgSm4} alt="" /></div>
                     </div>
                     <div className='col-span-12 '>
                         <img className='w-full' src={productImgLg} alt="" />

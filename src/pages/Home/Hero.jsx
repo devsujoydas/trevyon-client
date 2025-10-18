@@ -11,14 +11,18 @@ import heroImg3 from "../../assets/hero/hero3.png"
 import { Link } from 'react-router-dom'
 
 
-const heroText = (
-  <div className='md:h-[850px] h-[100dvh] hero-bg-color w-full  flex justify-center  items-center'>
-    <div className='max-w-screen-2xl w-full xl:mx-auto md:mx-10 mx-5 py-20 space-y-10'>
-      <h1 className='font-semibold text-6xl'>Discover your skin's true <br /> potential</h1>
-      <p className='text-xl'>Premium skincare that combines innovation with clean, effective ingredients for all skin types.</p>
-      <div className='text-lg flex gap-5'>
-        <Link to={"/products"} className='border border-zinc-200 rounded-full px-6 py-3 bg-white text-black hover:bg-transparent hover:text-white cursor-pointer active:scale-95 transition-all duration-300'>Shop Now</Link>
-        <Link to={"/about"} className='border border-zinc-200 rounded-full px-6 py-3 hover:bg-white hover:text-black bg-transparent text-white cursor-pointer active:scale-95 transition-all duration-300 '>About Us</Link>
+const heroText = (img) => (
+  <div className=' text-white bg-no-repeat bg-right bg-cover' style={{ backgroundImage: `url('${img}')` }} >
+    <div className='md:h-[850px] h-[450px] bg-[#0e00003f]  w-full  flex justify-center  items-center'>
+      <div className='md:h-[850px] w-full flex justify-center  items-center'>
+        <div className='max-w-screen-2xl w-full xl:mx-auto md:mx-10 mx-5 py-20 space-y-5 md:space-y-10'>
+          <h1 className='font-semibold md:text-6xl text-3xl'>Discover your skin's true <br className='md:block hidden' /> potential</h1>
+          <p className=' text-sm md:text-xl'>Premium skincare that combines innovation with clean, effective ingredients for all skin types.</p>
+          <div className=' text-sm md:text-lg flex gap-5'>
+            <Link to={"/products"} className='border border-zinc-200 rounded-full md:px-6 px-3 md:py-3 py-1.5 bg-white text-black hover:bg-transparent hover:text-white cursor-pointer active:scale-95 transition-all duration-300'>Shop Now</Link>
+            <Link to={"/about"} className='border border-zinc-200 rounded-full md:px-6 px-3 md:py-3 py-1.5 hover:bg-white hover:text-black bg-transparent text-white cursor-pointer active:scale-95 transition-all duration-300 '>About Us</Link>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,25 +38,9 @@ const Hero = () => {
         modules={[EffectFade, Autoplay]} className='mySwiper'
         autoplay={{ delay: 1000, disableOnInteraction: false }}
       >
-        <SwiperSlide>
-          <div className=' text-white bg-no-repeat bg-cover' style={{ backgroundImage: `url('${heroImg1}')` }} >
-            <div className='md:h-[850px] h-[100dvh] hero-bg-color w-full  flex justify-center  items-center'>
-              {heroText}
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className='text-white bg-no-repeat bg-cover' style={{ backgroundImage: `url('${heroImg2}')` }} >
-            <div className='md:h-[850px] h-[100dvh] hero-bg-color w-full  flex justify-center  items-center'>{heroText}</div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className=' text-white bg-no-repeat bg-cover' style={{ backgroundImage: `url('${heroImg3}')` }} >
-            <div className='md:h-[850px] h-[100dvh] hero-bg-color w-full  flex justify-center  items-center'>{heroText}</div>
-          </div>
-        </SwiperSlide>
+        <SwiperSlide>{heroText(heroImg1)}</SwiperSlide>
+        <SwiperSlide>{heroText(heroImg2)}</SwiperSlide>
+        <SwiperSlide>{heroText(heroImg3)}</SwiperSlide>
       </Swiper>
     </div>
   )
