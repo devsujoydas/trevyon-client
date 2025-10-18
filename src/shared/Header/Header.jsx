@@ -12,7 +12,7 @@ const Header = () => {
   const [showSearch, setShowSearch] = useState(false)
   const [showCartSide, setShowCartSide] = useState(false)
   const [showUser, setShowUser] = useState(false)
-  const [user] = useState(false)
+  const [user] = useState(true)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [openAccordion, setOpenAccordion] = useState(null)
 
@@ -165,8 +165,8 @@ const Header = () => {
                 >
                   {user ? (
                     <div className='flex flex-col w-30'>
-                      <Link to={"/"} className='hover:bg-zinc-200 px-3 py-2 border-b border-zinc-200'>My Account</Link>
-                      <Link to={"/"} className='hover:bg-zinc-200 px-3 py-2 border-b border-zinc-200'>Order History</Link>
+                      <Link to={"/profile"} className='hover:bg-zinc-200 px-3 py-2 border-b border-zinc-200'>My Account</Link>
+                      <Link to={"/profile/order-history"} className='hover:bg-zinc-200 px-3 py-2 border-b border-zinc-200'>Order History</Link>
                       <button className='hover:bg-red-600 hover:text-white px-3 py-2 cursor-pointer text-red-600 text-left'>
                         Log Out
                       </button>

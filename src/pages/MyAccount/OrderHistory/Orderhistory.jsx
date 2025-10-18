@@ -1,8 +1,43 @@
 import React from 'react'
 
+const OrderhistoryCard = () => {
+  return (
+    <div className='border-2 border-zinc-300 p-10 rounded-xl '>
+      <div className='font-semibold text-2xl
+       flex justify-between items-center'>
+        <h1>Order ORD-12345</h1>
+        <h1>Delivered</h1>
+      </div>
+      <div className=' text-lg text-zinc-700
+       flex justify-between items-center'>
+        <h1>May 15, 2023</h1>
+        <h1>$152.97</h1>
+      </div>
+      <div className=' text-sm mt-5 mb-2 flex justify-between items-center'>
+        <h1>Hydrating Essence x 1</h1>
+        <h1>$48.00</h1>
+      </div>
+      <div className=' text-sm mb-10
+       flex justify-between items-center'>
+        <h1>Nourishing Cream x 2</h1>
+        <h1>$104.00</h1>
+      </div>
+
+
+      <button className='border rounded-md w-full py-3.5 font-semibold hover:bg-zinc-100 active:bg-white cursor-pointer transition-all'>View Order Details</button>
+    </div>
+  )
+}
+
 const Orderhistory = () => {
   return (
-    <div>Orderhistory</div>
+    <div className='space-y-10'>
+      <OrderhistoryCard />
+      <OrderhistoryCard />
+      <OrderhistoryCard />
+      <OrderhistoryCard />
+      <OrderhistoryCard />
+    </div>
   )
 }
 
