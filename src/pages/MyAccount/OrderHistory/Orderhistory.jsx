@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const OrderhistoryCard = () => {
+const OrderhistoryCard = ({order}) => {
   return (
     <div className='border-2 border-zinc-300 p-10 rounded-xl '>
       <div className='font-semibold text-2xl
@@ -24,7 +25,7 @@ const OrderhistoryCard = () => {
       </div>
 
 
-      <button className='border rounded-md w-full py-3.5 font-semibold hover:bg-zinc-100 active:bg-white cursor-pointer transition-all'>View Order Details</button>
+      <Link to={`/order-history/${order?.id}`} className='border flex justify-center items-center rounded-md w-full py-3.5 font-semibold hover:bg-zinc-100 active:bg-white cursor-pointer transition-all'>View Order Details</Link>
     </div>
   )
 }

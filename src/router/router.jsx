@@ -20,7 +20,8 @@ import ForgotPassword from '../pages/Auth/ForgotPassword';
 
 import MyAccount from '../pages/MyAccount/MyAccount';
 import Profile from '../pages/MyAccount/Profile/Profile';
-import Orderhistory from '../pages/MyAccount/OrderHistory/Orderhistory';
+import Orderhistory from '../pages/MyAccount/OrderHistory/Orderhistory'; 
+import OrderHistoryDetails from '../pages/MyAccount/OrderHistory/OrderHistoryDetails';
 
 const router = createBrowserRouter([
   {
@@ -31,15 +32,20 @@ const router = createBrowserRouter([
       { path: "about", element: <About />, },
       { path: "contact", element: <ContactUs />, },
 
-      // Profile
 
+      // Profile
       {
-        path: "/profile",
+        path: "profile",
         element: <MyAccount />,
         children: [
           { path: "", element: <Profile />, },
           { path: "order-history", element: <Orderhistory />, },
         ]
+      },
+
+      {
+        path: "order-history/:id",
+        element: <OrderHistoryDetails />,
       },
 
 
