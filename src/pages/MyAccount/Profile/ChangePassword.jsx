@@ -24,9 +24,8 @@ const ChangePassword = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="space-y-6 mt-10"
       >
-        {/* Password Fields */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Current Password */}
+         
           <div>
             <label className="block text-black font-semibold mb-2">
               Current Password
@@ -47,8 +46,7 @@ const ChangePassword = () => {
               </p>
             )}
           </div>
-
-          {/* New Password */}
+ 
           <div>
             <label className="block text-black font-semibold mb-2">
               New Password
@@ -73,8 +71,7 @@ const ChangePassword = () => {
               </p>
             )}
           </div>
-
-          {/* Confirm New Password */}
+ 
           <div>
             <label className="block text-black font-semibold mb-2">
               Confirm New Password
@@ -98,8 +95,7 @@ const ChangePassword = () => {
             )}
           </div>
         </div>
-
-        {/* Submit Button */}
+ 
         <div>
           <button
             type="submit"
@@ -109,6 +105,10 @@ const ChangePassword = () => {
           </button>
         </div>
       </form>
+
+      <div className="">
+        <button className="w-full md:w-auto px-8 py-3 bg-red-600 text-white hover:text-black rounded-full cursor-pointer font-semibold hover:bg-transparent border border-transparent hover:border-black active:scale-95 transition">Log Out</button>
+      </div>
     </div>
   );
 };
