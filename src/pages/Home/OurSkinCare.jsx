@@ -5,7 +5,7 @@ import skinCareImg from '../../assets/skincare.png'
 
 const OurSkinCare = () => {
   return (
-    <div className='bg-[#F9E4CB] '>
+    <div className='bg-main '>
       <div className='w-main flex items-center justify-between md:flex-row flex-col md:py-0 py-10 gap-10 md:gap-20'>
         <div className='flex-1 space-y-3 md:space-y-8'>
           <h1 className='font-semibold text-2xl md:text-4xl'>Our Skincare Philosophy</h1>

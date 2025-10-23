@@ -14,12 +14,12 @@ const ShippingAddress = () => {
   };
 
   return (
-    <div className="space-y-10">
-      <h1 className="text-4xl font-semibold">Shipping Address</h1>
+    <div className=" space-y-5 md:space-y-10">
+      <h1 className="md:text-4xl text-2xl font-semibold">Shipping Address</h1>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6 mt-10 "
+        className="space-y-3 md:space-y-6  mt-5 md:mt-10 "
       >
         {/* Address Line */}
         <div>
@@ -36,7 +36,7 @@ const ShippingAddress = () => {
             })}
             type="text"
             placeholder="House 12, Road 7, Block C"
-            className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+            className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
               errors.address ? "border-red-500" : "border-gray-300"
             }`}
           />
@@ -60,7 +60,7 @@ const ShippingAddress = () => {
               })}
               type="text"
               placeholder="Dhaka"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.city ? "border-red-500" : "border-gray-300"
               }`}
             />
@@ -80,7 +80,7 @@ const ShippingAddress = () => {
               {...register("state", {
                 required: "Please select a state/province",
               })}
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.state ? "border-red-500" : "border-gray-300"
               }`}
               defaultValue=""
@@ -119,7 +119,7 @@ const ShippingAddress = () => {
               })}
               type="text"
               placeholder="1207"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.postalCode ? "border-red-500" : "border-gray-300"
               }`}
             />
@@ -140,7 +140,7 @@ const ShippingAddress = () => {
             {...register("country", {
               required: "Please select a country",
             })}
-            className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+            className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
               errors.country ? "border-red-500" : "border-gray-300"
             }`}
             defaultValue=""

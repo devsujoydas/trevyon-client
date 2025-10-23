@@ -17,14 +17,14 @@ const ChangePassword = () => {
   const newPassword = watch("newPassword");
 
   return (
-    <div className="space-y-10">
+    <div className=" space-y-5 md:space-y-10">
       <h1 className="text-4xl font-semibold">Change Password</h1>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6 mt-10"
+        className="space-y-5 md:space-y-6 mt-10"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
          
           <div>
             <label className="block text-black font-semibold mb-2">
@@ -36,7 +36,7 @@ const ChangePassword = () => {
               })}
               type="password"
               placeholder="Enter current password"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.currentPassword ? "border-red-500" : "border-gray-300"
               }`}
             />
@@ -61,7 +61,7 @@ const ChangePassword = () => {
               })}
               type="password"
               placeholder="Enter new password"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.newPassword ? "border-red-500" : "border-gray-300"
               }`}
             />
@@ -84,7 +84,7 @@ const ChangePassword = () => {
               })}
               type="password"
               placeholder="Re-enter new password"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.confirmPassword ? "border-red-500" : "border-gray-300"
               }`}
             />

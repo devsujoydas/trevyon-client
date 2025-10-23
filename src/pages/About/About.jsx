@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div>
 
-      <div className='bg-[#F9E4CB]'>
+      <div className='bg-main'>
         <div className='w-main flex items-center justify-between gap-5 md:flex-row flex-col md:py-0 py-5 '>
           <div>
             <h1 className=' text-3xl md:text-6xl mb-5'>Our <span className='font-semibold'>Story</span></h1>
@@ -65,7 +65,7 @@ const About = () => {
       </div>
 
 
-      <div className='bg-[#F9E4CB] py-30'>
+      <div className='bg-main py-30'>
         <div className='w-main text-center '>
           <h1 className='text-3xl md:text-6xl mb-5'>Our Ingredients</h1>
           <p className='text-lg md:text-2xl text-zinc-500'>We believe in the power of nature enhanced by science. Our formulations combine time-honored Korean botanical ingredients with advanced scientific compounds to create products that deliver visible results.

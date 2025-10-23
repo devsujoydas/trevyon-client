@@ -10,7 +10,7 @@ const Products = () => {
   return (
     <div>
       {/* Top Filter Bar */}
-      <div className="bg-[#F9E4CB] py-5 sticky top-0 z-30 border-b border-zinc-200">
+      <div className="bg-main py-5 sticky top-0 z-30 border-b border-zinc-200">
         <div className="w-main mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-lg">
           {/* Categories */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-10">

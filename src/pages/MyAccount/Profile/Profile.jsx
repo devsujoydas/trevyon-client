@@ -6,7 +6,7 @@ import ChangePassword from './ChangePassword'
 
 const Profile = () => {
     return (
-        <div className='w-main space-y-14'>
+        <div className='space-y-14'>
             <UserInformation />
             <ShippingAddress />
             <ChangePassword />

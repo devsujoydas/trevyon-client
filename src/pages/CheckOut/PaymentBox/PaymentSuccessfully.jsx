@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const PaymentSuccessfully = () => {
     return (
-        <div className='bg-[#F9E4CB] h-[85vh] flex justify-center items-center'>
+        <div className='bg-main h-[85vh] flex justify-center items-center'>
             <div className='text-center space-y-10'>
                 <div className='flex justify-center items-center'>
                     <div className=' bg-[#16A34A] text-white p-5 rounded-full'>

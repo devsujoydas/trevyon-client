@@ -16,6 +16,10 @@
     font-family: "BBH Sans Bartle", sans-serif;
 }
 
+.bg-main{
+    background-color: #F9E4CB;
+}
+
 .w-main {
     @apply max-w-screen-2xl mx-5 sm:mx-10 2xl:mx-auto
 }

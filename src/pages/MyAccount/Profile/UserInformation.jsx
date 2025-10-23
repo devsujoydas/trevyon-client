@@ -16,12 +16,11 @@ const UserInformation = () => {
   };
 
   return (
-    <div className="space-y-10">
-      <h1 className="text-4xl font-semibold">User Information</h1>
+    <div className=" space-y-5 md:space-y-10">
+      <h1 className="md:text-4xl text-2xl font-semibold ">User Information</h1>
 
-      <div>
-        {/* 🖼️ Profile Image Section */}
-        <div className="w-56 h-56 relative mx-auto md:mx-0">
+      <div> 
+        <div className="md:w-56 w-30 md:h-56 h-30 relative">
           <img
             src={profileImg}
             className="h-full w-full rounded-full object-cover"
@@ -29,7 +28,7 @@ const UserInformation = () => {
           />
           <button
             type="button"
-            className="bg-black text-white p-2 rounded-full absolute bottom-3 right-3 hover:bg-zinc-800 border-2 active:scale-95 transition-all active:rotate-180"
+            className="bg-black text-white p-1 md:p-2 rounded-full absolute bottom-3 right-3 hover:bg-zinc-800 border-2 active:scale-95 transition-all active:rotate-180"
           >
             <Pen size={18} />
           </button>
@@ -38,7 +37,7 @@ const UserInformation = () => {
         {/* 🧾 User Information Form */}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10"
+          className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 mt-10"
         >
           {/* First Name */}
           <div className="">
@@ -55,7 +54,7 @@ const UserInformation = () => {
               })}
               type="text"
               placeholder="John"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.firstName ? "border-red-500" : "border-gray-300"
               }`}
             />
@@ -81,7 +80,7 @@ const UserInformation = () => {
               })}
               type="text"
               placeholder="Doe"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.lastName ? "border-red-500" : "border-gray-300"
               }`}
             />
@@ -107,7 +106,7 @@ const UserInformation = () => {
               })}
               type="email"
               placeholder="you@example.com"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.email ? "border-red-500" : "border-gray-300"
               }`}
             />
@@ -133,7 +132,7 @@ const UserInformation = () => {
               })}
               type="text"
               placeholder="+880123456789"
-              className={`w-full border rounded-md p-4 focus:outline-none focus:border-black ${
+              className={`w-full border rounded-md px-4 py-3 md:py-4 placeholder:md:text-md placeholder:text-sm focus:outline-none focus:border-black ${
                 errors.phone ? "border-red-500" : "border-gray-300"
               }`}
             />

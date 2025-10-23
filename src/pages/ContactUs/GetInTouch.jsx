@@ -1,63 +1,62 @@
-import contactHero from '../../assets/contact/contact_us_hero.png'
-import contactFaq from '../../assets/contact/contact_us_faq.png'
+import contactHero from '../../assets/contact/contact_us_hero.png' 
 
 const GetInTouch = () => {
-    return (
-        <div className='w-main py-20'>
-            <h1 className='font-semibold text-6xl'>Contact Us</h1>
+  return (
+   <div className='w-main py-10 md:py-20'>
+        <h1 className='font-semibold text-3xl md:text-6xl'>Contact Us</h1>
 
-            <div className='flex gap-20 py-14 '>
-                <div className=' w-full'>
-                    <h1 className='text-3xl font-semibold py-10'>Get in Touch</h1>
-                    <p className='text-xl'>Have a question or need assistance? Fill out the form below and our team will get back to you as soon as possible.</p>
+        <div className='flex gap-10 md:gap-20 md:flex-row flex-col py-5 md:py-14 '>
+          <div className=' w-full'>
+            <h1 className='md:text-3xl text-xl font-semibold py-2 md:py-10'>Get in Touch</h1>
+            <p className=' text-sm md:text-xl'>Have a question or need assistance? Fill out the form below and our team will get back to you as soon as possible.</p>
 
-                    <form action="" className='py-10 space-y-10'>
-                        <div className=' space-y-5'>
-                            <div className="">
-                                <label className="block text-sm text-gray-700 font-medium mb-2">
-                                    Name
-                                </label>
-                                <input
-                                    type="text" placeholder=""
-                                    className={`w-full border-2 rounded-md p-4 outline-none  border-zinc-400`}
-                                />
-                            </div>
-                            <div className="">
-                                <label className="block text-sm text-gray-700 font-medium mb-2">
-                                    Email
-                                </label>
-                                <input
-                                    type="text" placeholder=""
-                                    className={`w-full border-2 rounded-md p-4 outline-none border-zinc-400`}
-                                />
-                            </div>
-                            <div className="">
-                                <label className="block text-sm text-gray-700 font-medium mb-2">
-                                    How can we help
-                                </label>
-                                <textarea
-                                    type="text" placeholder=""
-                                    rows={6}
-                                    className={`w-full border-2 rounded-md p-4 outline-none  border-zinc-400 `}
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <button
-                                type="submit"
-                                className="w-full md:w-auto px-10 py-4 hover:bg-black hover:text-white text-black rounded-full cursor-pointer border hover:border-transparent border-black active:scale-95 transition text-lg"
-                            >
-                                Let Us Know
-                            </button>
-                        </div>
-                    </form>
+            <form action="" className=' py-5 md:py-10 space-y-5 md:space-y-10'>
+              <div className='space-y-3 md:space-y-5'>
+                <div className="">
+                  <label className="block text-sm text-gray-700 font-medium mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text" placeholder=""
+                    className={`w-full border-2 rounded-md p-2 md:p-4 outline-none  border-zinc-400`}
+                  />
                 </div>
-                <div className=' w-full'>
-                    <img className='w-full object-center' src={contactHero} alt="" />
+                <div className="">
+                  <label className="block text-sm text-gray-700 font-medium mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="text" placeholder=""
+                    className={`w-full border-2 rounded-md p-2 md:p-4 outline-none border-zinc-400`}
+                  />
                 </div>
-            </div>
+                <div className="">
+                  <label className="block text-sm text-gray-700 font-medium mb-2">
+                    How can we help
+                  </label>
+                  <textarea
+                    type="text" placeholder=""
+                    rows={5}
+                    className={`w-full border-2 rounded-md p-2 md:p-4 outline-none  border-zinc-400 `}
+                  />
+                </div>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  className="md:w-full w-fit px-4 md:px-10 py-2 md:py-4 hover:bg-black active:bg-black hover:text-white active:text-white text-black rounded-full cursor-pointer border hover:border-transparent border-black active:scale-95 transition text-sm md:text-lg"
+                >
+                  Let Us Know
+                </button>
+              </div>
+            </form>
+          </div>
+          <div className=' w-full'>
+            <img className='w-full object-center rounded-md' src={contactHero} alt="" />
+          </div>
         </div>
-    )
+      </div>
+  )
 }
 
 export default GetInTouch

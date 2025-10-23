@@ -19,7 +19,7 @@ const Signin = () => {
   };
 
   return (
-    <div className="bg-[#F9E4CB] py-20">
+    <div className="bg-main py-20">
       <div className="w-main text-center">
         <h1 className=" text-3xl md:text-6xl font-semibold">Sign in to your account</h1>
         <p className="md:text-2xl text-lg mt-2 mt:mt-3">
