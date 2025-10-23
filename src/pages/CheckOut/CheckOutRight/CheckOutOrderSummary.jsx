@@ -1,4 +1,4 @@
-import summaryProductImg from '../../assets/products/product_1.png'
+import summaryProductImg from '../../../assets/products/product_1.png'
 
 
 const CheckOutOrderSummaryCard = () => {

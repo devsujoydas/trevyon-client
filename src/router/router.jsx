@@ -13,15 +13,16 @@ import AdminProducts from '../pages/Admin/AdminProducts';
 import Orders from '../pages/Admin/Orders';
 import Customers from '../pages/Admin/Customers';
 import Settings from '../pages/Admin/Settings';
-import PaymentCencel from '../pages/CheckOut/PaymentCenceled';
-import PaymentSuccessfully from '../pages/CheckOut/PaymentSuccessfully';
 import CheckOut from '../pages/CheckOut/CheckOut';
 import ForgotPassword from '../pages/Auth/ForgotPassword';
 
 import MyAccount from '../pages/MyAccount/MyAccount';
 import Profile from '../pages/MyAccount/Profile/Profile';
-import Orderhistory from '../pages/MyAccount/OrderHistory/Orderhistory'; 
+import Orderhistory from '../pages/MyAccount/OrderHistory/Orderhistory';
 import OrderHistoryDetails from '../pages/MyAccount/OrderHistory/OrderHistoryDetails';
+import PaymentCencel from '../pages/CheckOut/PaymentBox/PaymentCenceled';
+import PaymentSuccessfully from '../pages/CheckOut/PaymentBox/PaymentSuccessfully';
+import Cart from '../pages/Cart/Cart';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       // Products
       { path: "products", element: <Products />, },
       { path: "products/:id", element: <ProductDetails />, },
+
+
+      // Cart
+      { path: "cart", element: <Cart />, },
 
 
       // Checkout

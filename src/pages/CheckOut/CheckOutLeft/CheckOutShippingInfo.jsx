@@ -1,6 +1,7 @@
-import React from 'react'
+import { ChevronRight } from 'lucide-react';
+import { useState } from 'react'
 import { useForm } from 'react-hook-form';
-import ShippingOptions from './ShippingOptions';
+import { useNavigate } from 'react-router-dom';
 
 const CheckOutShippingInfo = () => {
     const {
@@ -14,11 +15,21 @@ const CheckOutShippingInfo = () => {
         console.log("🧾 User Info Form Data:", data);
         reset();
     };
+    const [selected, setSelected] = useState('standard')
+
+    const options = [
+        { id: 'standard', label: 'Standard Shipping (5-7 business days)', price: '$5.99' },
+        { id: 'express', label: 'Express Shipping (2-3 business days)', price: '$12.99' },
+        { id: 'overnight', label: 'Overnight Shipping (1 business day)', price: '$24.99' },
+    ]
+
+    const navigate = useNavigate()
+
 
 
     return (
         <div>
-            <h1 className='font-semibold text-xl md:text-2xl pb-10'>Shipping Information</h1>
+            <h1 className='font-semibold text-xl md:text-2xl mb-5 md:pb-10'>Shipping Information</h1>
 
             <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -125,7 +136,7 @@ const CheckOutShippingInfo = () => {
                 </div>
 
 
-                <div className="space-y-3 md:space-y-6 col-span-2  ">
+                <div className="space-y-3 md:space-y-6 md:col-span-2  ">
                     {/* Address Line */}
                     <div>
                         <label className="block text-black font-semibold mb-2">
@@ -265,12 +276,48 @@ const CheckOutShippingInfo = () => {
                         )}
                     </div>
                 </div>
+
+                <div className='md:col-span-2'>
+
+                    <h1 className='font-semibold text-xl md:text-2xl pb-5'>Shipping Method</h1>
+
+                    <div className='space-y-5'>
+                        {options.map((option) => (
+                            <div
+                                key={option.id}
+                                onClick={() => setSelected(option.id)}
+                                className={`flex justify-between items-center border p-3 md:p-4 rounded-xl cursor-pointer transition-all ${selected === option.id ? 'border-black bg-gray-50' : 'border-zinc-200'}`}
+                            >
+                                <label htmlFor={option.id} className='flex items-center md:gap-2 gap-1 cursor-pointer'>
+                                    <input
+                                        type='radio'
+                                        id={option.id}
+                                        name='shipping'
+                                        checked={selected === option.id}
+                                        onChange={() => setSelected(option.id)}
+                                        className='md:w-5 w-3 md:h-5 h-3 accent-black cursor-pointer'
+                                    />
+                                    <h1 className='text-sm md:text-[16px]'>{option.label}</h1>
+                                </label>
+                                <p className='font-semibold text-sm md:text-xl'>{option.price}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                </div>
+
+                <div className=' md:col-span-2 flex mt-10 justify-end'>
+                    <button 
+                    onClick={()=> navigate("/paymentSuccess")} 
+                    // onClick={()=> navigate("/paymentCencel")} 
+                    className='payment-btn'>
+                        Payment <ChevronRight />
+                    </button>
+                </div>
             </form>
 
 
-            <h1 className='font-semibold text-xl md:text-2xl py-10'>Shipping Method</h1>
 
-            <ShippingOptions />
 
         </div>
     )

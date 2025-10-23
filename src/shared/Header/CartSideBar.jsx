@@ -5,7 +5,9 @@ import { useState } from "react";
 import img from "../../assets/products/product_1.png";
 import { Link } from "react-router-dom";
 
-// 🧩 Single Cart Product Card
+
+
+
 const CartProductCard = ({ item, onIncrease, onDecrease, onRemove }) => {
     return (
         <div
@@ -63,8 +65,8 @@ const CartProductCard = ({ item, onIncrease, onDecrease, onRemove }) => {
         </div>
     );
 };
+ 
 
-// 🧱 Sidebar Component
 const CartSideBar = ({ showCartSide, setShowCartSide }) => {
     const [cartItems, setCartItems] = useState([
         {
@@ -82,8 +84,7 @@ const CartSideBar = ({ showCartSide, setShowCartSide }) => {
             image: img,
         },
     ]);
-
-    // 🪄 Handlers
+ 
     const handleIncrease = (id) => {
         setCartItems((prev) =>
             prev.map((item) =>
@@ -105,8 +106,7 @@ const CartSideBar = ({ showCartSide, setShowCartSide }) => {
     const handleRemove = (id) => {
         setCartItems((prev) => prev.filter((item) => item.id !== id));
     };
-
-    // 💰 Calculate total price
+ 
     const total = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
 
     return (
@@ -160,14 +160,17 @@ const CartSideBar = ({ showCartSide, setShowCartSide }) => {
                         </div>
 
                         {/* Footer */}
-                        <div className="p-5 border-t border-zinc-200">
-                            <div className="flex justify-between mb-3 text-lg font-semibold">
-                                <span>Total:</span>
-                                <span>${total.toFixed(2)}</span>
+                        <div>
+                            <Link className="my-10 inline-block" to={"/cart"}>View Cart Page</Link>
+                            <div className="p-5 border-t border-zinc-200">
+                                <div className="flex justify-between mb-3 text-lg font-semibold">
+                                    <span>Total:</span>
+                                    <span>${total.toFixed(2)}</span>
+                                </div>
+                                <Link to={`/checkout`} className="w-full inline-block py-3 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition cursor-pointer active:scale-95">
+                                    Checkout
+                                </Link>
                             </div>
-                            <Link to={`/checkout`} className="w-full inline-block py-3 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition cursor-pointer active:scale-95">
-                                Checkout
-                            </Link>
                         </div>
                     </motion.div>
                 </div>

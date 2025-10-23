@@ -27,3 +27,7 @@
 .plus-minus-btn{
     @apply border-2 border-zinc-400 hover:border-transparent active:shadow-none hover:shadow-md w-12 h-12 rounded-sm flex justify-center items-center text-3xl cursor-pointer bg-transparent hover:bg-black text-black hover:text-white transition-all duration-300 active:scale-95
 }
+
+.payment-btn{
+    @apply flex items-center gap-1  border border-transparent hover:border-black active:border-black py-2 md:py-3 px-4 md:px-8 bg-black hover:bg-transparent active:bg-transparent rounded-md hover:rounded-full text-sm md:text-lg text-white hover:text-black active:text-black cursor-pointer transition-all active:scale-95 duration-300
+}
