@@ -23,6 +23,7 @@ import OrderHistoryDetails from '../pages/MyAccount/OrderHistory/OrderHistoryDet
 import PaymentCencel from '../pages/CheckOut/PaymentBox/PaymentCenceled';
 import PaymentSuccessfully from '../pages/CheckOut/PaymentBox/PaymentSuccessfully';
 import Cart from '../pages/Cart/Cart';
+import api from '../services/api';
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,11 @@ const router = createBrowserRouter([
 
       // Products
       { path: "products", element: <Products />, },
-      { path: "products/:id", element: <ProductDetails />, },
+      {
+        path: "products/:id",
+        element: <ProductDetails />,
+        loader: ({ params }) => api.get(`/products/${params.id}`)
+      },
 
 
       // Cart

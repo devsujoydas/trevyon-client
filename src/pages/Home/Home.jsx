@@ -5,21 +5,28 @@ import OurSkinCare from './OurSkinCare'
 import HappyUsers from './HappyUsers'
 import JoinOurCommunity from '../../components/JoinOurCommunity/JoinOurCommunity'
 import SharedFeaturedProducts from '../../components/SharedFeaturedProducts/SharedFeaturedProducts'
-import { useAuth } from '../../AuthProvider/AuthProvider'
- 
+import useProducts from '../../hooks/useProducts'
+
 
 
 
 const Home = () => {
-  const {user} = useAuth() 
-    
+  const { products } = useProducts()
+
   return (
     <div>
-      
-      <Hero /> 
-      <SharedFeaturedProducts title={"Bestsellers"} id={"Bestsellers"} />
+      <Hero />
+      <SharedFeaturedProducts
+        title={"Bestsellers"}
+        id={"Bestsellers"}
+        showProducts={products.slice(0, 4)}
+      />
       <ShopByCategory />
-      <SharedFeaturedProducts title={"New Arrive"} id={"NewArrive"} />
+      <SharedFeaturedProducts
+        title={"New Arrive"}
+        id={"NewArrive"}
+        showProducts={products.slice(4, 9)}
+      />
       <OurSkinCare />
       <HappyUsers />
       <JoinOurCommunity />
