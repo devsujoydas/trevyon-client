@@ -1,242 +1,264 @@
 [
   {
-    "id": 1,
-    "name": "Velvet Matte Lipstick",
+    "name": "Cosrx Advanced Snail 92 All In One Repair Cream (100gm) Jar",
     "image": "https://example.com/products/lipstick-main.jpg",
     "imageGallery": [
-      "https://example.com/products/lipstick-1.jpg",
-      "https://example.com/products/lipstick-2.jpg",
-      "https://example.com/products/lipstick-3.jpg",
-      "https://example.com/products/lipstick-4.jpg"
+      "https://cdn.beautybooth.com.bd/uploads/all/kJJpXKGJvtNK7k4U5kQORDZZciR7ln1m2gTw8WNv.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/WIh6N3YqsTzcMLdZyS8UJOTmRLt6GCRWSX8CHpfT.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/6t63NoASYHyYDEtYU1iQxTf3WqN8XNOYaZ6Naeaf.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/o1LbH0d4dazK3ljgqpy0sb6ZLOI7MfBusHYEy1z0.jpg"
+    ],
+    "price": 18.5,
+    "discountPrice": 15.49,
+    "discountPercentage": 16,
+    "rating": {
+      "average": 5.0,
+      "users": ["u201", "u233", "u305", "u417", "u598"]
+    },
+    "details": "Cosrx Advanced Snail 92 All-In-One Repair Cream works to heal damaged skin and shield against the telltale symptoms of premature aging brought on by negative environmental influences. It is made up of 92% snail mucin, a naturally occurring skin repair agent that plumps up your skin, moisturizes it, increases its resistance to injury, and calms your skin from the inside out. Moreover, it contains all-natural components including sodium hyaluronate, green tea extract, and panthenol, which combine to strengthen and cure damaged skin.",
+    "benefits": [
+      "Promotes healthy skin healing, illuminates and moisturizes",
+      "Richly restores dry skin",
+      "Minimizes redness and encourages healthy healing",
+      "Provides nourishment and hydration without excess oil",
+      "Promotes skin suppleness and plumpness"
+    ],
+    "ingredients": [
+      "Snail Secretion Filtrate",
+      "Betaine",
+      "Caprylic/Capric Triglyceride",
+      "Cetearyl Olivate",
+      "Sorbitan Olivate",
+      "Sodium Hyaluronate",
+      "Cetearyl Alcohol",
+      "Stearic acid",
+      "Arginine",
+      "Dimethicone",
+      "Carbomer",
+      "Panthenol",
+      "Allantoin",
+      "Sodium Polyacrylate",
+      "Xanthan Gum",
+      "Ethyl Hexanediol",
+      "Adenosine",
+      "Phenoxyethanol"
+    ]
+  },
+  {
+    "name": "Cosrx Propolis Light Ampoule (30ml)",
+    "image": "https://cdn.beautybooth.com.bd/uploads/all/8pKmXWQWl8ekk87G6VzJYpyzO5zxZim1IGGe9FAe.png",
+    "imageGallery": [
+      "https://cdn.beautybooth.com.bd/uploads/all/8pKmXWQWl8ekk87G6VzJYpyzO5zxZim1IGGe9FAe.png",
+      "https://cdn.beautybooth.com.bd/uploads/all/PtDxgz0mPQzV947WdUiEGg8mHfO2mNQXobKTaV6V.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/8pKmXWQWl8ekk87G6VzJYpyzO5zxZim1IGGe9FAe.png",
+      "https://cdn.beautybooth.com.bd/uploads/all/RiRehJ5PpnOl62VpVTzZuTogkzZCiYFMPX7ELH1n.png"
     ],
     "price": 19.99,
-    "discountPrice": 12.99,
-    "discountPercentage": 35,
-    "rating": {
-      "average": 4.8,
-      "users": ["u201", "u233", "u305", "u417", "u598", "u602"]
-    },
-    "details": "A smooth, long-lasting matte lipstick that glides effortlessly for a bold finish.",
-    "theLowdown": [
-      "Rich pigment with a velvety texture",
-      "Smudge-proof and non-drying formula",
-      "Infused with Vitamin E for nourishment"
-    ],
-    "whatElse": [
-      "Available in 12 flattering shades",
-      "Vegan and cruelty-free",
-      "Dermatologist tested",
-      "Comes in eco-friendly packaging"
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Hydrating Glow Face Serum",
-    "image": "https://example.com/products/serum-main.jpg",
-    "imageGallery": [
-      "https://example.com/products/serum-1.jpg",
-      "https://example.com/products/serum-2.jpg",
-      "https://example.com/products/serum-3.jpg",
-      "https://example.com/products/serum-4.jpg"
-    ],
-    "price": 29.99,
-    "discountPrice": 22.49,
-    "discountPercentage": 25,
-    "rating": {
-      "average": 4.7,
-      "users": ["u310", "u333", "u402", "u455", "u509"]
-    },
-    "details": "Boost your skin’s radiance with this hydrating serum packed with Vitamin C and Hyaluronic Acid.",
-    "theLowdown": [
-      "Brightens and evens out skin tone",
-      "Deep hydration without oily residue",
-      "Reduces fine lines and dullness"
-    ],
-    "whatElse": [
-      "Lightweight, non-sticky formula",
-      "Perfect for daily use under makeup",
-      "Suitable for all skin types",
-      "Paraben and sulfate-free"
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Rose Glow Moisturizing Lotion",
-    "image": "https://example.com/products/lotion-main.jpg",
-    "imageGallery": [
-      "https://example.com/products/lotion-1.jpg",
-      "https://example.com/products/lotion-2.jpg",
-      "https://example.com/products/lotion-3.jpg",
-      "https://example.com/products/lotion-4.jpg"
-    ],
-    "price": 18.0,
-    "discountPrice": 12.6,
-    "discountPercentage": 30,
-    "rating": {
-      "average": 4.5,
-      "users": ["u111", "u207", "u309", "u416", "u590", "u699"]
-    },
-    "details": "A lightweight lotion infused with rosewater to leave your skin soft, glowing, and beautifully scented.",
-    "theLowdown": [
-      "24-hour moisture lock technology",
-      "Soothes and refreshes tired skin",
-      "Delicate rose fragrance"
-    ],
-    "whatElse": [
-      "Non-greasy formula for daily use",
-      "Suitable for sensitive skin",
-      "Dermatologist approved",
-      "Recyclable packaging"
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Coconut Hair Nourishing Oil",
-    "image": "https://example.com/products/hairoil-main.jpg",
-    "imageGallery": [
-      "https://example.com/products/hairoil-1.jpg",
-      "https://example.com/products/hairoil-2.jpg",
-      "https://example.com/products/hairoil-3.jpg",
-      "https://example.com/products/hairoil-4.jpg"
-    ],
-    "price": 22.99,
-    "discountPrice": 16.09,
-    "discountPercentage": 30,
-    "rating": {
-      "average": 4.6,
-      "users": ["u142", "u254", "u361", "u477", "u512"]
-    },
-    "details": "Restore shine and strength to your hair with this 100% natural coconut oil blend.",
-    "theLowdown": [
-      "Strengthens hair roots and prevents breakage",
-      "Adds shine and smoothness",
-      "Light tropical fragrance"
-    ],
-    "whatElse": [
-      "Made with cold-pressed coconut oil",
-      "No mineral oil or silicones",
-      "Safe for colored hair",
-      "Cruelty-free and vegan"
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Aloe Vera Soothing Gel",
-    "image": "https://example.com/products/aloegel-main.jpg",
-    "imageGallery": [
-      "https://example.com/products/aloegel-1.jpg",
-      "https://example.com/products/aloegel-2.jpg",
-      "https://example.com/products/aloegel-3.jpg",
-      "https://example.com/products/aloegel-4.jpg"
-    ],
-    "price": 14.99,
-    "discountPrice": 9.74,
-    "discountPercentage": 35,
+    "discountPrice": 16.49,
+    "discountPercentage": 18,
     "rating": {
       "average": 4.9,
-      "users": ["u223", "u301", "u402", "u444", "u520", "u550", "u610"]
+      "users": ["u211", "u312", "u454", "u567", "u634"]
     },
-    "details": "Multi-purpose soothing gel enriched with pure Aloe Vera to calm and hydrate skin instantly.",
-    "theLowdown": [
-      "Instant cooling and soothing relief",
-      "Absorbs quickly, leaving no residue",
-      "Hydrates dry and irritated skin"
+    "details": "COSRX Propolis Light Ampoule is enriched with 83% Black Bee Propolis extract that provides antibacterial and anti-inflammatory benefits for healing stressed skin. It deeply nourishes, hydrates, and improves skin radiance without greasiness.",
+    "benefits": [
+      "Hydrates and nourishes skin for a dewy glow",
+      "Soothes irritated and acne-prone skin",
+      "Boosts radiance and skin vitality",
+      "Non-sticky lightweight texture",
+      "Suitable for all skin types"
     ],
-    "whatElse": [
-      "Perfect after sun exposure",
-      "Safe for face, body, and hair",
-      "Alcohol-free and fragrance-free",
-      "Tested by dermatologists"
+    "ingredients": [
+      "Propolis Extract",
+      "Butylene Glycol",
+      "1,2-Hexanediol",
+      "Glycerin",
+      "Sodium Hyaluronate",
+      "Panthenol",
+      "Aqua",
+      "Ethylhexylglycerin"
     ]
   },
   {
-    "id": 6,
-    "name": "Floral Mist Face Toner",
-    "image": "https://example.com/products/toner-main.jpg",
+    "name": "Cerave Moisturizing Cream (236ml)",
+    "image": "https://cdn.beautybooth.com.bd/uploads/all/cerave-moisturizing-cream_13.webp",
     "imageGallery": [
-      "https://example.com/products/toner-1.jpg",
-      "https://example.com/products/toner-2.jpg",
-      "https://example.com/products/toner-3.jpg",
-      "https://example.com/products/toner-4.jpg"
+      "https://cdn.beautybooth.com.bd/uploads/all/cerave-moisturizing-cream_13.webp",
+      "https://cdn.beautybooth.com.bd/uploads/all/FKEaatDl9dfVMc5ccx3N6ZzwWAqIBsZ4TfTq2o06.webp",
+      "https://cdn.beautybooth.com.bd/uploads/all/Oj6dVErs7XFGObARlS9HYfxL4CXwbWB8ybf4bbVf.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/sGR9oFw6YZbuQlfCqlIUAU3pQA5xgmzrSMQfx1Jh.jpg"
     ],
-    "price": 17.99,
-    "discountPrice": 13.49,
-    "discountPercentage": 25,
-    "rating": {
-      "average": 4.4,
-      "users": ["u145", "u255", "u318", "u422", "u533"]
-    },
-    "details": "A refreshing toner with natural floral extracts that tighten pores and revive tired skin.",
-    "theLowdown": [
-      "Tones and refreshes instantly",
-      "Balances skin’s pH levels",
-      "Leaves a dewy, radiant finish"
-    ],
-    "whatElse": [
-      "Rose and chamomile infused",
-      "Can be used before moisturizer or makeup",
-      "Alcohol-free gentle formula",
-      "Comes in a recyclable glass bottle"
-    ]
-  },
-  {
-    "id": 7,
-    "name": "Charcoal Deep Clean Face Mask",
-    "image": "https://example.com/products/facemask-main.jpg",
-    "imageGallery": [
-      "https://example.com/products/facemask-1.jpg",
-      "https://example.com/products/facemask-2.jpg",
-      "https://example.com/products/facemask-3.jpg",
-      "https://example.com/products/facemask-4.jpg"
-    ],
-    "price": 24.99,
-    "discountPrice": 17.49,
-    "discountPercentage": 30,
-    "rating": {
-      "average": 4.7,
-      "users": ["u101", "u207", "u306", "u412", "u599", "u630"]
-    },
-    "details": "Detox your skin with a powerful charcoal mask that unclogs pores and removes impurities.",
-    "theLowdown": [
-      "Draws out dirt, oil, and blackheads",
-      "Leaves skin smooth and refreshed",
-      "Minimizes pore size visibly"
-    ],
-    "whatElse": [
-      "Contains activated charcoal and clay",
-      "Best used twice a week",
-      "Dermatologist tested",
-      "Cruelty-free and paraben-free"
-    ]
-  },
-  {
-    "id": 8,
-    "name": "Cherry Lip Oil Gloss",
-    "image": "https://example.com/products/lipoil-main.jpg",
-    "imageGallery": [
-      "https://example.com/products/lipoil-1.jpg",
-      "https://example.com/products/lipoil-2.jpg",
-      "https://example.com/products/lipoil-3.jpg",
-      "https://example.com/products/lipoil-4.jpg"
-    ],
-    "price": 15.99,
-    "discountPrice": 10.39,
-    "discountPercentage": 35,
+    "price": 24.66,
     "rating": {
       "average": 4.8,
-      "users": ["u111", "u210", "u305", "u412", "u502", "u630"]
+      "users": ["u202", "u323", "u409", "u556", "u701"]
     },
-    "details": "Glossy lip oil infused with cherry extract for a shiny, hydrated pout.",
-    "theLowdown": [
-      "Hydrates and softens lips instantly",
-      "Adds glossy shine without stickiness",
-      "Light cherry scent with tint"
+    "details": "CeraVe Moisturizing Cream provides long-lasting hydration with three essential ceramides and hyaluronic acid to help restore the protective skin barrier.",
+    "benefits": [
+      "Restores and maintains the skin’s natural barrier",
+      "Provides 24-hour hydration",
+      "Non-greasy, fast-absorbing formula",
+      "Suitable for dry to very dry skin"
     ],
-    "whatElse": [
-      "Infused with natural cherry and jojoba oils",
-      "Can be used alone or over lipstick",
-      "Cruelty-free and vegan",
-      "Pocket-sized bottle with applicator"
+    "ingredients": [
+      "Aqua",
+      "Glycerin",
+      "Cetearyl Alcohol",
+      "Caprylic/Capric Triglyceride",
+      "Ceteareth-20",
+      "Ceramide NP",
+      "Ceramide AP",
+      "Hyaluronic Acid",
+      "Petrolatum"
+    ]
+  },
+  {
+    "name": "PanOxyl Acne Creamy Wash 4 Percent Benzoyl Peroxide Daily Control (170gm)",
+    "image": "https://cdn.beautybooth.com.bd/uploads/all/acne-creamy-wash-4-percent-benzoyl-peroxide-daily-control-170gm-4_32.webp",
+    "imageGallery": [
+      "https://cdn.beautybooth.com.bd/uploads/all/acne-creamy-wash-4-percent-benzoyl-peroxide-daily-control-170gm-4_32.webp",
+      "https://cdn.beautybooth.com.bd/uploads/all/tgF7jRrg9FuunN0DjaY5fxB2TRm1XKNYuck0iNyc.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/ZZ1i7NShyq5HgUAFP02jvZTx3eVqdCGruQbjtEs0.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/PG5WyW2qIxEe2bzpc5jhkpjhFhOrkTQHpeiJwB4i.jpg"
+    ],
+    "price": 21.5,
+    "details": "PanOxyl 4% Acne Creamy Wash reduces acne-causing bacteria, unclogs pores, and calms irritation for clear, balanced skin.",
+    "benefits": [
+      "Eliminates acne-causing bacteria",
+      "Balances skin pH and increases hydration",
+      "Purifies and unclogs pores",
+      "Prevents new pimples from forming"
+    ],
+    "ingredients": [
+      "Benzoyl Peroxide (4%)",
+      "Glycerin",
+      "Dimethicone",
+      "Carbomer",
+      "Palmitic Acid",
+      "Stearic Acid",
+      "Water",
+      "Sodium Hydroxide",
+      "Xanthan Gum"
+    ]
+  },
+  {
+    "name": "Garnier Sakura White Pinkish Glow Sleeping Mask (50ml)",
+    "image": "https://cdn.beautybooth.com.bd/uploads/all/xnFokyMr9UN5vpuCn7QDiCNLXcSDOOWnAKZDKGz9.jpg",
+    "imageGallery": [
+      "https://cdn.beautybooth.com.bd/uploads/all/xnFokyMr9UN5vpuCn7QDiCNLXcSDOOWnAKZDKGz9.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/SAgPHot0LlXQZJfoQ7ZDYo7LR6ZGT2oP2AT1tSUN.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/ACFwbN92z0bwC7mMXyUdOxaRERfJb0LGfcmzimFe.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/JjWkGus48p6Tn3hPJIhXi9tfVjOGV4AYzhUXlNZf.jpg"
+    ],
+    "price": 10.44,
+    "details": "Garnier Sakura White Sleeping Mask brightens dull skin overnight, infused with Sakura extract to leave a pinkish glow and hydrated complexion.",
+    "benefits": [
+      "Brightens dull skin overnight",
+      "Hydrates and smoothens texture",
+      "Infused with Sakura extract for glow",
+      "Lightweight, non-sticky formula"
+    ],
+    "ingredients": [
+      "Water",
+      "Niacinamide",
+      "Glycerin",
+      "Dimethicone",
+      "Sakura Extract",
+      "Sodium Hyaluronate",
+      "Carbomer",
+      "Phenoxyethanol"
+    ]
+  },
+  {
+    "name": "Garnier Micellar Rose Water Cleanse and Glow (100ml)",
+    "image": "https://cdn.beautybooth.com.bd/uploads/all/Xh6MKsrRwhJFlDLaA5ldVIQGg1njSKsWLXak0Mwp.jpg",
+    "imageGallery": [
+      "https://cdn.beautybooth.com.bd/uploads/all/Xh6MKsrRwhJFlDLaA5ldVIQGg1njSKsWLXak0Mwp.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/z9kEkub7ItKzwx84WOt8thiVjlb0V61TlgalkAOV.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/8j9gTkqCay8HVHPIaFPyCTGlBFwhQw9smjEzPVof.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/kC3wmNMyMdkyaW2ZyCcyLKGKl69ZuAnTkqizQiRA.jpg"
+    ],
+    "price": 8.99,
+    "details": "Garnier Micellar Rose Water cleanses, removes makeup, and adds a radiant glow to dull skin using gentle micellar technology.",
+    "benefits": [
+      "Removes makeup and impurities effectively",
+      "Infused with rose water for glow",
+      "Suitable for sensitive skin",
+      "No rinsing required"
+    ],
+    "ingredients": [
+      "Aqua",
+      "Rosa Damascena Flower Water",
+      "Glycerin",
+      "Poloxamer 184",
+      "Hexylene Glycol",
+      "Disodium Cocoamphodiacetate",
+      "Disodium EDTA"
+    ]
+  },
+  {
+    "name": "Simple Replenishing Rich Moisturizer (125ml)",
+    "image": "https://cdn.beautybooth.com.bd/uploads/all/simple-replenishing-rich-moisturiser_82.webp",
+    "imageGallery": [
+      "https://cdn.beautybooth.com.bd/uploads/all/simple-replenishing-rich-moisturiser_82.webp",
+      "https://cdn.beautybooth.com.bd/uploads/all/v1yyVEZyjME6R5FU3WFzEyqpfJjWUyo4b0aOHNPT.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/NC1KE668onUp3Z9IOZsGaqIUWTcKnLZIvWlXVQUE.jpg",
+      "https://cdn.beautybooth.com.bd/uploads/all/ZScstr4JwsfPdEgllKFMLnmwtKterjhN5X9FgLxR.jpg"
+    ],
+    "price": 11.99,
+    "discountPrice": 9.99,
+    "discountPercentage": 17,
+    "details": "Simple Replenishing Rich Moisturizer provides 12-hour hydration and restores dry, sensitive skin using Pro-Vitamin B5 and Glycerin.",
+    "benefits": [
+      "12-hour intense hydration",
+      "Soothes dry, sensitive skin",
+      "Free from perfume and color",
+      "Dermatologically tested"
+    ],
+    "ingredients": [
+      "Water",
+      "Paraffinum Liquidum",
+      "Glycerin",
+      "Stearic Acid",
+      "Glycol Stearate",
+      "Dimethicone",
+      "Bisabolol",
+      "Panthenol",
+      "Carbomer"
+    ]
+  },
+  {
+    "name": "Medicube Collagen Jelly Cream - Niacinamide & Freeze-Dried Hydrolyzed Collagen (3.71 fl.oz.)",
+    "image": "https://m.media-amazon.com/images/I/61leLgR06vL._SY355_.jpg",
+    "imageGallery": [
+      "https://m.media-amazon.com/images/I/61leLgR06vL._SY355_.jpg",
+      "https://m.media-amazon.com/images/I/719yyvLc9AL._SY355_.jpg",
+      "https://m.media-amazon.com/images/I/712pthvoK8L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/617Of7BIgYL._SL1500_.jpg"
+    ],
+    "price": 32.99,
+    "discountPrice": 27.49,
+    "discountPercentage": 17,
+    "details": "Medicube Collagen Jelly Cream is formulated with freeze-dried hydrolyzed collagen and niacinamide to strengthen the skin barrier, hydrate deeply, and provide a firmer glow.",
+    "benefits": [
+      "Boosts hydration and elasticity",
+      "24-hour glow and firmness",
+      "Brightens and evens skin tone",
+      "Improves smoothness and texture"
+    ],
+    "ingredients": [
+      "Water",
+      "Hydrolyzed Collagen",
+      "Niacinamide",
+      "Glycerin",
+      "Butylene Glycol",
+      "Betaine",
+      "Sodium Hyaluronate",
+      "Panthenol",
+      "Adenosine",
+      "Allantoin",
+      "Carbomer",
+      "Phenoxyethanol"
     ]
   }
 ]

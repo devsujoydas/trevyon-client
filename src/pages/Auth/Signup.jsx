@@ -32,22 +32,41 @@ const Signup = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="bg-white max-w-md mx-auto mt-10 p-8 rounded-sm shadow-md text-left"
         >
-          {/* Full Name */}
+          {/* First Name */}
           <div className="mb-6">
             <label className="block text-gray-700 font-medium mb-2">
-              Full Name
+              First Name
             </label>
             <input
-              {...register("fullName", { required: "Full name is required" })}
+              {...register("firstName", { required: "First name is required" })}
               type="text"
-              placeholder="Enter Your Name"
+              placeholder="Enter Your First Name"
               className={`w-full border rounded-md px-4 py-3 focus:outline-none focus:border-black ${
-                errors.fullName ? "border-red-500" : "border-gray-300"
+                errors.firstName ? "border-red-500" : "border-gray-300"
               }`}
             />
-            {errors.fullName && (
+            {errors.firstName && (
               <p className="text-red-500 text-sm mt-1">
-                {errors.fullName.message}
+                {errors.firstName.message}
+              </p>
+            )}
+          </div>
+          {/* Last Name */}
+          <div className="mb-6">
+            <label className="block text-gray-700 font-medium mb-2">
+              Last Name
+            </label>
+            <input
+              {...register("lastName", { required: "Last name is required" })}
+              type="text"
+              placeholder="Enter Your Last Name"
+              className={`w-full border rounded-md px-4 py-3 focus:outline-none focus:border-black ${
+                errors.lastName ? "border-red-500" : "border-gray-300"
+              }`}
+            />
+            {errors.lastName && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.lastName.message}
               </p>
             )}
           </div>

@@ -170,7 +170,7 @@ const Cart = () => {
                     </div>
 
                     <div>
-                        <button onClick={()=>navigate("/checkout")} className='bg-black text-white w-full py-3 rounded-md hover:bg-transparent active:bg-transparent hover:text-black active:text-black border border-transparent hover:border-black active:border-black cursor-pointer active:scale-95 transition-all duration-300
+                        <button onClick={() => navigate("/checkout")} className='bg-black text-white w-full py-3 rounded-md hover:bg-transparent active:bg-transparent hover:text-black active:text-black border border-transparent hover:border-black active:border-black cursor-pointer active:scale-95 transition-all duration-300
                         '>Proceed to Checkout</button>
                     </div>
                 </div>

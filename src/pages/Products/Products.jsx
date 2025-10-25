@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Product from "./Product";
 import JoinOurCommunity from "../../components/JoinOurCommunity/JoinOurCommunity";
+import useProducts from "../../hooks/useProducts";
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState("All Products");
 
   const categories = ["Face", "Brow", "Eye", "Lip", "Sets"];
-
+  const { products, productloading } = useProducts() 
+  
   return (
     <div>
       {/* Top Filter Bar */}
@@ -17,11 +19,10 @@ const Products = () => {
             {/* All Products */}
             <button
               onClick={() => setActiveCategory("All Products")}
-              className={`font-semibold transition-all cursor-pointer  pb-0.5 ${
-                activeCategory === "All Products"
-                  ? "text-black border-b-2 border-black "
-                  : "text-zinc-700 hover:text-black border-b-2 border-transparent"
-              }`}
+              className={`font-semibold transition-all cursor-pointer  pb-0.5 ${activeCategory === "All Products"
+                ? "text-black border-b-2 border-black "
+                : "text-zinc-700 hover:text-black border-b-2 border-transparent"
+                }`}
             >
               All Products
             </button>
@@ -31,11 +32,10 @@ const Products = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`cursor-pointer font-medium transition-all pb-0.5 ${
-                  activeCategory === cat
-                    ? "text-black border-b-2 border-black "
-                    : "text-zinc-700 hover:text-black border-b-2 border-transparent"
-                }`}
+                className={`cursor-pointer font-medium transition-all pb-0.5 ${activeCategory === cat
+                  ? "text-black border-b-2 border-black "
+                  : "text-zinc-700 hover:text-black border-b-2 border-transparent"
+                  }`}
               >
                 {cat}
               </button>
@@ -58,22 +58,17 @@ const Products = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="py-10 w-main mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-10">
-        {/* You can later filter based on activeCategory */}
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-      </div>
 
+      {productloading ?
+        <div className="h-[70vh] flex justify-center items-center">
+          <div className="w-10 h-10 rounded-full border-y-2 animate-spin" ></div>
+        </div>
+        :
+        <div className="py-10 w-main mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-10">
+          {products.map(product => <Product key={product._id} product={product} />)}
+
+        </div>
+      }
       {/* Join Section */}
       <JoinOurCommunity />
     </div>
