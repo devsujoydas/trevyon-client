@@ -5,6 +5,8 @@ import NavSearch from './NavSearch'
 import { motion, AnimatePresence } from 'framer-motion'
 import NavSearchFullScreen from './NavSearchFullScreen'
 import CartSideBar from './CartSideBar'
+import HeaderLogo from '../../components/HeaderLogo/HeaderLogo'
+import { useAuth } from '../../AuthProvider/AuthProvider'
 
 const Header = () => {
   const [showSkinCareDropDown, setShowSkinCareDropDown] = useState(false)
@@ -15,6 +17,7 @@ const Header = () => {
   const [user] = useState(true)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [openAccordion, setOpenAccordion] = useState(null)
+  const {logout} = useAuth()
 
 
   // Dropdown animation for desktop
@@ -46,9 +49,7 @@ const Header = () => {
 
         {/* Left side: Logo + Nav */}
         <div className='flex items-center gap-10'>
-          <Link to="/" className='font-family-third text-lg sm:text-2xl font-semibold'>
-            TREVYON
-          </Link>
+          <HeaderLogo />
 
           {/* Desktop Nav */}
           <nav className='hidden md:flex items-center gap-6'>
@@ -167,7 +168,7 @@ const Header = () => {
                     <div className='flex flex-col w-30'>
                       <Link to={"/profile"} className='hover:bg-zinc-200 px-3 py-2 border-b border-zinc-200'>My Account</Link>
                       <Link to={"/profile/order-history"} className='hover:bg-zinc-200 px-3 py-2 border-b border-zinc-200'>Order History</Link>
-                      <button className='hover:bg-red-600 hover:text-white px-3 py-2 cursor-pointer text-red-600 text-left'>
+                      <button onClick={()=>logout()} className='hover:bg-red-600 hover:text-white px-3 py-2 cursor-pointer text-red-600 text-left'>
                         Log Out
                       </button>
                     </div>

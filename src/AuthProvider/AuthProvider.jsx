@@ -1,47 +1,95 @@
-import { createContext, useContext, useState, useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { createContext, useContext, useState, useEffect, useCallback } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import api from "../services/api";
 
 const AuthContext = createContext();
 
-const fetchProfile = async () => {
-  try {
-    const result = await api.get("/user/get-users")
-    return result.data || null;
-  } catch (err) {
-    return err.response?.status === 401 ? null : Promise.reject(err);
-  }
-};
-
 const AuthProvider = ({ children }) => {
+  const queryClient = useQueryClient();
   const [user, setUser] = useState(() => {
-    const storedUser = localStorage.getItem("user");
-    return storedUser ? JSON.parse(storedUser) : null;
+    const stored = localStorage.getItem("user");
+    return stored ? JSON.parse(stored) : null;
   });
 
-  const { data, isFetching, isError } = useQuery({
-    queryKey: ["user"],
+  /** ------------------------
+   * 🧠 Fetch User Profile (API call)
+   * ------------------------ */
+  const fetchProfile = useCallback(async () => {
+    if (!user?.email) return null; // skip if no user email
+    const { data } = await api.get("/user", { params: { email: user.email } });
+    return data;
+  }, [user?.email]);
+
+  /** ------------------------
+   * 🔁 Query Hook (auto cache + refetch)
+   * ------------------------ */
+  const {
+    data: profile,
+    isLoading,
+    isFetching,
+    isError,
+    refetch,
+  } = useQuery({
+    queryKey: ["user", user?.email],
     queryFn: fetchProfile,
-    staleTime: 5 * 1000,
-    retry: 1,
+    enabled: !!user?.email, // only fetch if logged in
+    staleTime: 1000 * 60 * 5, // 5 min caching
     refetchOnWindowFocus: false,
   });
- 
 
+  /** ------------------------
+   * 💾 Sync profile data with localStorage
+   * ------------------------ */
   useEffect(() => {
-    if (data !== undefined) {
-      setUser(data);
-      if (data) localStorage.setItem("user", JSON.stringify(data));
-      else localStorage.removeItem("user");
+    if (profile) {
+      setUser(profile);
+      localStorage.setItem("user", JSON.stringify(profile));
+    } else if (profile === null) {
+      setUser(null);
+      localStorage.removeItem("user");
     }
-  }, [data]);
+  }, [profile]);
 
-  const value = { user, setUser, isFetching, isError };
- 
-  if (isFetching && !user) {
+  /** ------------------------
+   * 🚪 Login, Logout Handlers
+   * ------------------------ */
+  const login = async (credentials) => {
+    const { data } = await api.post("/login", credentials);
+    setUser(data.user);
+    localStorage.setItem("user", JSON.stringify(data.user));
+    queryClient.invalidateQueries(["user"]);
+  };
+
+  const logout = () => {
+    api.post("/auth/logout")
+    .then(res=>{
+      console.log(res.data)
+    })
+    setUser(null);
+    localStorage.removeItem("user");
+    queryClient.removeQueries(["user"]);
+  };
+
+  console.log(user)
+
+  const value = {
+    user,
+    setUser,
+    isLoading,
+    isFetching,
+    isError,
+    refetchUser: refetch,
+    login,
+    logout,
+  };
+
+  /** ------------------------
+   * 🌀 Loader (initial loading state)
+   * ------------------------ */
+  if (isLoading && !user) {
     return (
       <div className="h-screen flex justify-center items-center">
-        <div className="h-10 w-10 border-y-2 rounded-full animate-spin"></div>
+        <div className="h-10 w-10 border-4 border-gray-400 border-t-black rounded-full animate-spin" />
       </div>
     );
   }
@@ -49,5 +97,7 @@ const AuthProvider = ({ children }) => {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
-export default AuthProvider;
+
+export default AuthProvider
+/** Custom Hook */
 export const useAuth = () => useContext(AuthContext);

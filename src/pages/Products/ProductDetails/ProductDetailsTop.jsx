@@ -9,7 +9,7 @@ const ProductDetailsTop = ({ product }) => {
 
     useEffect(() => {
         setShowLargeImg(product?.image)
-    }, [product])
+    }, [product._id, product?.image])
     
     const [quantity, setQuantity] = useState(1)
 
@@ -57,7 +57,7 @@ const ProductDetailsTop = ({ product }) => {
                 </div>
 
                 {/* Details Section */}
-                <div className='md:w-5/12 space-y-8 md:space-y-10'>
+                <div className='md:w-5/12 space-y-5 md:space-y-8'>
 
                     {/* Name & Rating */}
                     <div>
@@ -83,7 +83,7 @@ const ProductDetailsTop = ({ product }) => {
                     {/* Description */}
                     {product?.description && (
                         <div>
-                            <h1 className='font-semibold text-xl md:text-2xl mb-2 md:mb-3'>Details</h1>
+                            <h1 className='font-semibold text-xl md:text-2xl mb-2 md:mb-3 uppercase'>Details</h1>
                             <p className='text-base md:text-lg font-medium'>{product?.description}</p>
                         </div>
                     )}
@@ -91,7 +91,7 @@ const ProductDetailsTop = ({ product }) => {
                     {/* Benefits */}
                     {product?.benefits?.length > 0 && (
                         <div>
-                            <h1 className='font-semibold text-xl md:text-2xl mb-2 md:mb-3'>Benefits:</h1>
+                            <h1 className='font-semibold text-xl md:text-2xl mb-2 md:mb-3 uppercase'>Benefits:</h1>
                             <ul className='space-y-1'>
                                 {product?.benefits.map((benefit, idx) => (
                                     <li key={idx} className='flex items-start gap-2'>

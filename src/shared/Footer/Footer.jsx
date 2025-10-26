@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import HeaderLogo from '../../components/HeaderLogo/HeaderLogo';
 
 
 const Footer = () => {
@@ -11,9 +12,10 @@ const Footer = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5  py-10'>
 
         <div className='col-span-1 space-y-5'>
-          <Link to={"/"} className='font-family-third text-xl sm:text-2xl font-semibold inline-block'>
-            TREVYON
-          </Link>
+
+          <HeaderLogo />
+
+
           <p className='text-sm md:text-lg text-zinc-600'>Lorem ipsum dolor sit amet consectetur. <br /> Scelerisque lectus habitasse adipiscing.</p>
           <div className='text-[#F092B0] flex text-2xl items-center gap-2'>
             <FaFacebook />

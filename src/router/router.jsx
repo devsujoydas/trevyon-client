@@ -7,12 +7,7 @@ import Products from '../pages/Products/Products';
 import ProductDetails from '../pages/Products/ProductDetails/ProductDetails';
 import Signup from '../pages/Auth/Signup';
 import Signin from '../pages/Auth/Signin';
-import Overview from '../pages/Admin/Overview';
-import Admin from '../pages/Admin/Admin';
-import AdminProducts from '../pages/Admin/AdminProducts';
-import Orders from '../pages/Admin/Orders';
-import Customers from '../pages/Admin/Customers';
-import Settings from '../pages/Admin/Settings';
+import Settings from '../pages/Admin/Dashboard/Settings';
 import CheckOut from '../pages/CheckOut/CheckOut';
 import ForgotPassword from '../pages/Auth/ForgotPassword';
 
@@ -22,8 +17,18 @@ import Orderhistory from '../pages/MyAccount/OrderHistory/Orderhistory';
 import OrderHistoryDetails from '../pages/MyAccount/OrderHistory/OrderHistoryDetails';
 import PaymentCencel from '../pages/CheckOut/PaymentBox/PaymentCenceled';
 import PaymentSuccessfully from '../pages/CheckOut/PaymentBox/PaymentSuccessfully';
+
 import Cart from '../pages/Cart/Cart';
 import api from '../services/api';
+
+import Dashboard from '../pages/Admin/Dashboard/Dashboard';
+import Overview from '../pages/Admin/Dashboard/Overview';
+import Admin from '../pages/Admin/Admin';
+import AdminProducts from '../pages/Admin/AdminProducts';
+import Orders from '../pages/Admin/Dashboard/Orders';
+import Customers from '../pages/Admin/Dashboard/Customers';
+import AdminResetPassword from '../pages/Admin/Auth/AdminResetPassword';
+import AdminSignin from '../pages/Admin/Auth/AdminSignin';
 
 const router = createBrowserRouter([
   {
@@ -80,11 +85,19 @@ const router = createBrowserRouter([
     path: "/admin",
     element: <Admin />,
     children: [
-      { path: "", element: <Overview />, },
-      { path: "products", element: <AdminProducts />, },
-      { path: "orders", element: <Orders />, },
-      { path: "customers", element: <Customers />, },
-      { path: "settings", element: <Settings />, },
+      { path: "reset-password", element: <AdminResetPassword />, },
+      { path: "signin", element: <AdminSignin />, },
+      {
+        path: "dashboard",
+        element: <Dashboard />,
+        children: [
+          { path: "", element: <Overview />, },
+          { path: "products", element: <AdminProducts />, },
+          { path: "orders", element: <Orders />, },
+          { path: "customers", element: <Customers />, },
+          { path: "settings", element: <Settings />, },
+        ]
+      }
     ]
   }
 ]);

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 import { useForm } from "react-hook-form";
+import api from "../../services/api";
 
 const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -15,6 +16,11 @@ const Signin = () => {
 
   const onSubmit = (data) => {
     console.log("🧾 Sign In Form Data:", data);
+
+    api.post("/auth/login", { email: data.email, password: data.password })
+      .then(res => {
+        console.log(res.data)
+      })
     reset();
   };
 
@@ -119,7 +125,6 @@ const Signin = () => {
             </p>
           )}
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full py-3 cursor-pointer active:scale-95 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"

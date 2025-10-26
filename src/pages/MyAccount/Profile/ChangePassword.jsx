@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useAuth } from "../../../AuthProvider/AuthProvider";
 
 const ChangePassword = () => {
   const {
@@ -13,6 +14,8 @@ const ChangePassword = () => {
     console.log("🔐 Change Password Data:", data);
     reset();
   };
+
+  const {logout} = useAuth()
 
   const newPassword = watch("newPassword");
 
@@ -107,7 +110,7 @@ const ChangePassword = () => {
       </form>
 
       <div className="">
-        <button className="w-full md:w-auto px-8 py-3 bg-red-600 text-white hover:text-black rounded-full cursor-pointer font-semibold hover:bg-transparent border border-transparent hover:border-black active:scale-95 transition">Log Out</button>
+        <button onClick={()=>logout()} className="w-full md:w-auto px-8 py-3 bg-red-600 text-white hover:text-black rounded-full cursor-pointer font-semibold hover:bg-transparent border border-transparent hover:border-black active:scale-95 transition">Log Out</button>
       </div>
     </div>
   );

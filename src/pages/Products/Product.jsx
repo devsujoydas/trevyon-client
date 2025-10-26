@@ -5,9 +5,7 @@ import { IoStar } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-
-  console.log(product)
-
+ 
   const [hovered, setHovered] = useState(false);
 
   return (

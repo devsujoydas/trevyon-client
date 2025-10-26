@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 import { useForm } from "react-hook-form";
+import api from "../../services/api";
+import { useAuth } from "../../AuthProvider/AuthProvider";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { setUser } = useAuth()
+
   const {
     register,
     handleSubmit,
@@ -14,7 +18,13 @@ const Signup = () => {
 
   const onSubmit = (data) => {
     console.log("🧾 Signup Form Data:", data);
-    reset();
+    api.post("/auth/register", { data })
+      .then(res => {
+
+        setUser(res.data.user)
+        console.log(res.data.user)
+      })
+    // reset();
   };
 
   return (
@@ -41,9 +51,8 @@ const Signup = () => {
               {...register("firstName", { required: "First name is required" })}
               type="text"
               placeholder="Enter Your First Name"
-              className={`w-full border rounded-md px-4 py-3 focus:outline-none focus:border-black ${
-                errors.firstName ? "border-red-500" : "border-gray-300"
-              }`}
+              className={`w-full border rounded-md px-4 py-3 focus:outline-none focus:border-black ${errors.firstName ? "border-red-500" : "border-gray-300"
+                }`}
             />
             {errors.firstName && (
               <p className="text-red-500 text-sm mt-1">
@@ -60,9 +69,8 @@ const Signup = () => {
               {...register("lastName", { required: "Last name is required" })}
               type="text"
               placeholder="Enter Your Last Name"
-              className={`w-full border rounded-md px-4 py-3 focus:outline-none focus:border-black ${
-                errors.lastName ? "border-red-500" : "border-gray-300"
-              }`}
+              className={`w-full border rounded-md px-4 py-3 focus:outline-none focus:border-black ${errors.lastName ? "border-red-500" : "border-gray-300"
+                }`}
             />
             {errors.lastName && (
               <p className="text-red-500 text-sm mt-1">
@@ -86,9 +94,8 @@ const Signup = () => {
               })}
               type="email"
               placeholder="you@example.com"
-              className={`w-full border rounded-md px-4 py-3 focus:outline-none focus:border-black ${
-                errors.email ? "border-red-500" : "border-gray-300"
-              }`}
+              className={`w-full border rounded-md px-4 py-3 focus:outline-none focus:border-black ${errors.email ? "border-red-500" : "border-gray-300"
+                }`}
             />
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">
@@ -115,9 +122,8 @@ const Signup = () => {
                 })}
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
-                className={`w-full border rounded-md px-4 py-3 pr-10 focus:outline-none focus:border-black ${
-                  errors.password ? "border-red-500" : "border-gray-300"
-                }`}
+                className={`w-full border rounded-md px-4 py-3 pr-10 focus:outline-none focus:border-black ${errors.password ? "border-red-500" : "border-gray-300"
+                  }`}
               />
               <button
                 type="button"
@@ -148,9 +154,8 @@ const Signup = () => {
                 })}
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
-                className={`w-full border rounded-md px-4 py-3 pr-10 focus:outline-none focus:border-black ${
-                  errors.confirmPassword ? "border-red-500" : "border-gray-300"
-                }`}
+                className={`w-full border rounded-md px-4 py-3 pr-10 focus:outline-none focus:border-black ${errors.confirmPassword ? "border-red-500" : "border-gray-300"
+                  }`}
               />
               <button
                 type="button"
